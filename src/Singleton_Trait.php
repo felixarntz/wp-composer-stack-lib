@@ -14,7 +14,7 @@ trait Singleton_Trait {
 	 *
 	 * @var Singleton_Interface|null
 	 */
-	private $instance = null;
+	private static $instance = null;
 
 	/**
 	 * Gets the main instance of the class.
