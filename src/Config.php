@@ -36,7 +36,7 @@ class Config implements Runnable, Singleton_Interface {
 
 		$this->data = $this->info = $this->settings = array();
 
-		$this->data['content_dir'] = str_replace( '/mu-plugins/wp-composer-stack', '', dirname( __FILE__ ) );
+		$this->data['content_dir'] = str_replace( '/mu-plugins/wp-composer-stack-lib/src', '', dirname( __FILE__ ) );
 		$this->data['webroot_dir'] = dirname( $this->data['content_dir'] );
 		$this->data['root_dir'] = dirname( $this->data['webroot_dir'] );
 

@@ -20,7 +20,7 @@ class Plugin_Autoloader implements Runnable, Singleton_Interface {
 			return;
 		}
 
-		$this->relative_path = '/../' . basename( untrailingslashit( wpprsc_get_path() ) );
+		$this->relative_path = '/../' . basename( untrailingslashit( plugin_dir_path( dirname( __DIR__ ) ) ) );
 
 		if ( is_admin() ) {
 			add_filter( 'show_advanced_plugins', array( $this, 'show_in_admin' ), 0, 2 );
@@ -63,7 +63,7 @@ class Plugin_Autoloader implements Runnable, Singleton_Interface {
 	}
 
 	protected function check_cache() {
-		$cache = get_site_option( 'wpprsc_plugin_autoloader' );
+		$cache = get_site_option( 'wp_composer_stack_plugin_autoloader' );
 
 		if ( $cache === false ) {
 			return $this->update_cache();
@@ -82,7 +82,7 @@ class Plugin_Autoloader implements Runnable, Singleton_Interface {
 		$this->activated = $rebuild ? $plugins : array_diff_key( $plugins, $this->cache['plugins'] );
 		$this->cache = array( 'plugins' => $plugins, 'count' => $this->count_plugins() );
 
-		update_site_option( 'wpprsc_plugin_autoloader', $this->cache );
+		update_site_option( 'wp_composer_stack_plugin_autoloader', $this->cache );
 	}
 
 	protected function plugin_hooks() {

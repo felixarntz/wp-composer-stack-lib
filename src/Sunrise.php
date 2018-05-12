@@ -151,7 +151,7 @@ class Sunrise implements Runnable, Singleton_Interface {
 		}
 
 		$networks = get_networks( array(
-			'domain__in' => $domains,
+			'domain__in' => $domains_or_site,
 			'path'       => '/',
 			'orderby'    => 'domain_length',
 			'order'      => 'DESC',

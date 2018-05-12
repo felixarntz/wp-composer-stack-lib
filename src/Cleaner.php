@@ -5,7 +5,7 @@
 
 namespace Leaves_And_Love\WP_Composer_Stack;
 
-class REST_API implements Runnable, Singleton_Interface {
+class Cleaner implements Runnable, Singleton_Interface {
 	use Singleton_Trait;
 
 	public function run() {
