@@ -17,5 +17,6 @@ class WP_Composer_Stack implements Runnable, Singleton_Interface {
 		REST_API::instance()->run();
 		Cleaner::instance()->run();
 		HTML5_Support::instance()->run();
+		Branded_Login::instance()->run();
 	}
 }
