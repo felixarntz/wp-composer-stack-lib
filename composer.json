@@ -1,0 +1,29 @@
+{
+  "name": "felixarntz/wp-composer-stack-lib",
+  "type": "wordpress-muplugin",
+  "license": "GPL-2.0-or-later",
+  "description": "Library classes to be used in the WP Composer Stack project boilerplate.",
+  "homepage": "https://github.com/felixarntz/wp-composer-stack-lib/",
+  "authors": [
+    {
+      "name": "Felix Arntz",
+      "email": "felix-arntz@leaves-and-love.net",
+      "homepage": "http://leaves-and-love.net"
+    }
+  ],
+  "keywords": [
+    "wordpress", "stack", "composer", "vagrant", "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/felixarntz/wp-composer-stack-lib/issues"
+  },
+  "autoload": {
+    "psr-4": {
+      "Leaves_And_Love\\WP_Composer_Stack\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.0",
+    "composer/installers": "~1.0"
+  }
+}
